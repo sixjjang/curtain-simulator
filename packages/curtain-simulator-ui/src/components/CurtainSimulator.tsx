@@ -1046,7 +1046,10 @@ const CurtainSimulator: React.FC = () => {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                position: "relative",
+                zIndex: 20,
+                pointerEvents: "auto"
               }}>
                 <UploadPhoto onUpload={setPhoto} />
               </div>
@@ -1115,7 +1118,10 @@ const CurtainSimulator: React.FC = () => {
             padding: "0.7rem 1rem",
             boxShadow: "0 8px 32px rgba(0,0,0,0.1)",
             border: "1px solid rgba(226, 232, 240, 0.8)",
-            gridColumn: "1 / -1"
+            gridColumn: "1 / -1",
+            position: "relative",
+            zIndex: 15,
+            pointerEvents: "auto"
           }}>
             <div style={{
               display: "flex",
@@ -1185,7 +1191,15 @@ const CurtainSimulator: React.FC = () => {
               </div>
               
               {/* 오른쪽: 액션 버튼들 */}
-              <div style={{ display: "flex", flexDirection: "row", gap: "0.75rem", flexWrap: "wrap" }}>
+              <div style={{ 
+                display: "flex", 
+                flexDirection: "row", 
+                gap: "0.75rem", 
+                flexWrap: "wrap",
+                position: "relative",
+                zIndex: 20,
+                pointerEvents: "auto"
+              }}>
                 <UploadPhoto onUpload={setPhoto} />
                 <button
                   onClick={() => setShowTemplateModal(true)}
